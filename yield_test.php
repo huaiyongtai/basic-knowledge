@@ -24,7 +24,8 @@ $smem  = usageMem();
 
 
 $gen = gen();
-var_dump($gen->current()); exit;
+var_dump(__LINE__, $gen->key());
+var_dump(__LINE__, $gen->current()); exit;
 
 
 echo $smem.PHP_EOL;
