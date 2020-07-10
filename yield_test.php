@@ -13,7 +13,7 @@ function usageMem()
 }
 
 
-function gen() {
+function gen($a) {
     echo __LINE__.PHP_EOL;
     yield 'ceshi';
     echo __LINE__.PHP_EOL;
@@ -24,7 +24,7 @@ $smem  = usageMem();
 
 
 $gen = gen();
-echo "++++++++++++FOREACH+++++++++++";
+echo "++++++++++++FOREACH+++++++++++".PHP_EOL;
 foreach ($gen as $key => $val) {
     var_dump(__LINE__, $key, $val);
 }
