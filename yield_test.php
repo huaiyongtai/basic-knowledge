@@ -13,4 +13,7 @@ function usageMem()
 }
 
 $stime = microTimeFloat();
+$smem  = usageMem();
+
+echo $smem;
 
