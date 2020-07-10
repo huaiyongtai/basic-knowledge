@@ -17,6 +17,7 @@ function gen($a) {
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
     yield ++$a;
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
+    yield ++$a;
 }
 
 $stime = microTimeFloat();
