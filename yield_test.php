@@ -15,8 +15,8 @@ function usageMem()
 
 function gen($a) {
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
-    exit;
-    return $a;
+    //exit;
+    //return $a;
     yield ++$a;
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
     yield ++$a;
