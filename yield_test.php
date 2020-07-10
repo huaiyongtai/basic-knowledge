@@ -23,7 +23,7 @@ function gen($a) {
 
 function gen1($a) {
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
-    yield $a => 'gen1-test';
+    yield $a+100 => 'gen1-test';
     exit;
     $a += yield ++$a;
 }
