@@ -14,16 +14,16 @@ function usageMem()
 
 
 function gen($a) {
-    echo __LINE__.PHP_EOL;
-    yield 'ceshi';
-    echo __LINE__.PHP_EOL;
+    echo __LINE__.__FUNCTION__.$a;
+    yield $a++;
+    echo __LINE__.__FUNCTION__.$a;
 }
 
 $stime = microTimeFloat();
 $smem  = usageMem();
 
 
-$gen = gen();
+$gen = gen(1);
 echo "++++++++++++FOREACH+++++++++++".PHP_EOL;
 foreach ($gen as $key => $val) {
     var_dump(__LINE__, $key, $val);
