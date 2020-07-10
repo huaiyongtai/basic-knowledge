@@ -12,7 +12,10 @@ function usageMem()
     return memory_get_usage();
 }
 
-yield 1;
+
+function gen() {
+    yield 1;
+}
 
 $stime = microTimeFloat();
 $smem  = usageMem();
