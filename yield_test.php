@@ -16,5 +16,5 @@ $stime = microTimeFloat();
 $smem  = usageMem();
 
 echo $smem.PHP_EOL;
-echo $smem / 1024;
+echo $smem / 1024 / 1024;
 
