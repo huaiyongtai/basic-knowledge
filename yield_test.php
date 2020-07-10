@@ -15,5 +15,6 @@ function usageMem()
 $stime = microTimeFloat();
 $smem  = usageMem();
 
-echo $smem;
+echo $smem.PHP_EOL;
+echo $smem / 1024;
 
