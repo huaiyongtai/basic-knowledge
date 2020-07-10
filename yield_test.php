@@ -8,4 +8,5 @@ function microtime_float()
 }
 $stime = microtime_float();
 
+echo time().PHP_EOL;
 echo $stime;
