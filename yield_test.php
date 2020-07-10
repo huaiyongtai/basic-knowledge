@@ -23,7 +23,8 @@ function gen($a) {
 
 function gen1($a) {
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
-    $a = yield ++$a;
+    yield $a => 'gen1-test';
+    $a += yield ++$a;
 }
 
 $stime = microTimeFloat();
@@ -31,7 +32,7 @@ $smem  = usageMem();
 
 
 echo "++++++++++++START+++++++++++".PHP_EOL;
-$gen = gen(1);
+$gen = gen1(1);
 echo "++++++++++++FOREACH+++++++++++".PHP_EOL;
 foreach ($gen as $key => $val) {
     echo __LINE__. ":$key => $val".PHP_EOL;
