@@ -24,13 +24,11 @@ $smem  = usageMem();
 
 
 $gen = gen();
+echo "++++++++++++FOREACH+++++++++++";
 foreach ($gen as $key => $val) {
-var_dump(__LINE__, $gen->key());
-
+    var_dump(__LINE__, $key, $val);
 }
-var_dump(__LINE__, $gen->current());
-var_dump(__LINE__, $gen->current()); exit;
-
+exit;
 
 echo $smem.PHP_EOL;
 echo $smem / 1024 / 1024;
