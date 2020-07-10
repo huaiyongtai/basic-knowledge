@@ -14,8 +14,9 @@ function usageMem()
 
 
 function gen() {
-    echo __LINE__;
+    echo __LINE__.PHP_EOL;
     yield 1;
+    echo __LINE__.PHP_EOL;
 }
 
 $stime = microTimeFloat();
