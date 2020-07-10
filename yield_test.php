@@ -1,12 +1,10 @@
 <?php
 
 
-function microtime_float()
+function microTimeFloat()
 {
     list($usec, $sec) = explode(" ", microtime());
     return ((float)$usec + (float)$sec);
 }
-$stime = microtime_float();
+$stime = microTimeFloat();
 
-echo time().PHP_EOL;
-echo $stime;
