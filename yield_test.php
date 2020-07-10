@@ -15,8 +15,8 @@ function usageMem()
 
 function gen($a) {
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
-    yield ++$a;
     exit;
+    yield ++$a;
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
     yield ++$a;
     echo __LINE__.":".__FUNCTION__.":$a".PHP_EOL;
@@ -26,8 +26,9 @@ $stime = microTimeFloat();
 $smem  = usageMem();
 
 
+echo "++++++++++++START+++++++++++".PHP_EOL;
 $gen = gen(1);
-echo "++++++++++++FOREACH+++++++++++".PHP_EOL;
+echo "++++++++++++START+++++++++++".PHP_EOL;
 foreach ($gen as $key => $val) {
     echo __LINE__. ":$key => $val".PHP_EOL;
 }
