@@ -25,6 +25,9 @@ $smem  = usageMem();
 
 $gen = gen();
 var_dump(__LINE__, $gen->key());
+var_dump(__LINE__, $gen->current());
+var_dump(__LINE__, $gen->current());
+var_dump(__LINE__, $gen->current());
 var_dump(__LINE__, $gen->current()); exit;
 
 
