@@ -15,7 +15,7 @@ function usageMem()
 
 function gen() {
     echo __LINE__.PHP_EOL;
-    yield 1;
+    yield 'ceshi';
     echo __LINE__.PHP_EOL;
 }
 
