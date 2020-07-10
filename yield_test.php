@@ -15,7 +15,6 @@ function usageMem()
 
 function gen() {
     echo __LINE__;
-    exit;
     yield 1;
 }
 
@@ -24,7 +23,7 @@ $smem  = usageMem();
 
 
 $gen = gen();
-var_dump($gen); exit;
+var_dump($gen->current()); exit;
 
 
 echo $smem.PHP_EOL;
