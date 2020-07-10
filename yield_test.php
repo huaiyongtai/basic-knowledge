@@ -28,7 +28,7 @@ $smem  = usageMem();
 
 echo "++++++++++++START+++++++++++".PHP_EOL;
 $gen = gen(1);
-echo "++++++++++++START+++++++++++".PHP_EOL;
+echo "++++++++++++FOREACH+++++++++++".PHP_EOL;
 foreach ($gen as $key => $val) {
     echo __LINE__. ":$key => $val".PHP_EOL;
 }
